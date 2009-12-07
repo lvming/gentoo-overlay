@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=TeXworks
+Exec=texworks
+Icon=texworks
+Terminal=false
+Type=Application
+MimeType=text/x-tex;
+Categories=Development;TextEditor;

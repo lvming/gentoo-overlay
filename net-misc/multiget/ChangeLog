@@ -1,0 +1,14 @@
+#####################################################################
+# ChangeLog for net-misc/multiget
+# vim: ft=gentoo-changelog
+# triobird-overlay ebuild
+# URL: http://code.google.com/p/triobird-overlay/
+# $Id: ChangeLog 22 2008-12-07 13:12:17Z triobird $
+#####################################################################
+
+  07 Dec 2008; triobird <triobird@example.com>
+  +files/multiget.desktop, +multiget-1.2.0.ebuild:
+  
+  Add multiget-1.2.0.ebuild.
+
+*multiget-1.2.0 (07 Dec 2008)

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+cd $HOME
+if [ ! -d $HOME/.xmind ];then
+    mkdir $HOME/.xmind
+fi
+cd $HOME/.xmind
+exec /opt/xmind/xmind "$@"

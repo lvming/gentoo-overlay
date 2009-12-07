@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Nestopia NES Emulator
+Comment=Play Nintendo ROM files
+Exec=nst
+Terminal=false
+Type=Application
+StartupNotify=true
+Icon=applications-games
+Categories=GNOME;GTK;Game;

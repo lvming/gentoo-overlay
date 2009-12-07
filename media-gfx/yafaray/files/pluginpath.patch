@@ -1,0 +1,14 @@
+diff --git a/src/yafraycore/environment.cc b/src/yafraycore/environment.cc
+index 61e2d7b..6162c5d 100644
+--- a/src/yafraycore/environment.cc
++++ b/src/yafraycore/environment.cc
+@@ -44,6 +44,9 @@
+ #include <yaf_revision.h>
+ #include <string>
+ 
++#undef Y_PLUGINPATH
++#define Y_PLUGINPATH "/usr/lib/yafaray"
++
+ __BEGIN_YAFRAY
+ 
+ using namespace::std;

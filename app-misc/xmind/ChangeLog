@@ -1,0 +1,29 @@
+#####################################################################
+# ChangeLog for app-misc/xmind
+# vim: ft=gentoo-changelog
+# triobird-overlay ebuild
+# URL: http://code.google.com/p/triobird-overlay/
+# $Id: ChangeLog 43 2008-12-27 04:31:01Z triobird $
+#####################################################################
+
+  27 Dec 2008; triobird <triobird@example.com> +xmind-3.0.1.ebuild:
+  fix gconf uninstall
+
+  26 Dec 2008; triobird <triobird@example.com>  
+  +files/xmind-thumbnailer.desktop 
+  +files/xmind 
+  files/xmind.schemas 
+  xmind-3.0.1.ebuild:
+  
+  Add xfce support.
+
+  24 Dec 2008; triobird <triobird@example.com> 
+  +files/xmind.desktop 
+  +files/xmind.schemas 
+  +files/xmind-thumbnailer 
+  +files/xmind.xml
+  +xmind-3.0.1.ebuild:
+  
+  Add xmind 3.0.1
+
+*xmind-3.0.1 (24 Dec 2008)

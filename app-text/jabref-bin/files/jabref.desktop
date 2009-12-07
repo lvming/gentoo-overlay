@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=jabref
+Type=Application
+Terminal=false
+Exec=jabref
+Icon=JabRef-icon-48
+GenericName=JabRef bibliography reference manager
+Categories=Office;
+MimeType=text/x-bibtex

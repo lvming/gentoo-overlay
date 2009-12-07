@@ -1,0 +1,24 @@
+<gconfschemafile>
+    <schemalist>
+	<schema>
+	    <key>/schemas/desktop/gnome/thumbnailers/application@x-xmind/enable</key>
+	    <applyto>/desktop/gnome/thumbnailers/application@x-xmind/enable</applyto>
+	    <owner>xmind</owner>
+	    <type>bool</type>
+	    <default>true</default>
+	    <locale name="C">
+		<short>Enable thumbnailing of xmind document.</short>
+	    </locale>
+	</schema>
+	<schema>
+	    <key>/schemas/desktop/gnome/thumbnailers/application@x-xmind/command</key>
+	    <applyto>/desktop/gnome/thumbnailers/application@x-xmind/command</applyto>
+	    <owner>xmind</owner>
+	    <type>string</type>
+	    <default>/usr/libexec/xmind-thumbnailer %i %o %s</default>
+	    <locale name="C">
+		<short>Thumnail command for xmind document.</short>
+	    </locale>
+	</schema>
+    </schemalist>
+</gconfschemafile>

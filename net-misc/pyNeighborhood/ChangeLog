@@ -1,0 +1,12 @@
+#####################################################################
+# ChangeLog for net-misc/pyNeighborhood
+# vim: ft=gentoo-changelog
+# triobird-overlay ebuild
+# URL: http://code.google.com/p/triobird-overlay/
+# $Id: ChangeLog 39 2008-12-26 12:53:21Z triobird $
+#####################################################################
+
+  26 Dec 2008; triobird <triobird@example.com> +pyNeighborhood-0.4.1.ebuild:
+  Add pyNeighborhood 0.4.1
+
+*pyNeighborhood-0.4.1 (26 Dec 2008)

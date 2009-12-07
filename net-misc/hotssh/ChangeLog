@@ -1,0 +1,15 @@
+#####################################################################
+# ChangeLog for net-misc/hotssh
+# vim: ft=gentoo-changelog
+# triobird-overlay ebuild
+# URL: http://code.google.com/p/triobird-overlay/
+# $Id: ChangeLog 35 2008-12-22 16:08:07Z triobird $
+#####################################################################
+
+  22 Dec 2008; triobird <triobird@example.com> +hotssh-0.2.6-r1.ebuild:
+  Fix icon installation.
+
+  20 Dec 2008; triobird <triobird@example.com> +hotssh-0.2.6.ebuild:
+  Add hotssh 0.2.6
+
+*hotssh-0.2.6 (20 Dec 2008)

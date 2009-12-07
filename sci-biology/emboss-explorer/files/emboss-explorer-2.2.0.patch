@@ -1,0 +1,112 @@
+diff --git a/lib/EMBOSS/GUI/Conf.pm b/lib/EMBOSS/GUI/Conf.pm
+index 8277add..d8efdf8 100644
+--- a/lib/EMBOSS/GUI/Conf.pm
++++ b/lib/EMBOSS/GUI/Conf.pm
+@@ -43,79 +43,17 @@ Public methods are described below:
+ 
+ package EMBOSS::GUI::Conf;
+ 
+-use strict;
+ use warnings;
+ 
+ use Carp;
++use File::Path;
+ 
+ our $VERSION = 1.10;
+ 
+-# path to the EMBOSS::GUI HTML files
+-our $HTML_PATH = "/var/www/emboss/html";
+-
+-# URL corresponding to $HTML_PATH above
+-our $HTML_URL = "/emboss";
+-
+-# URL specifying the style sheet to use
+-our $STYLE_URL = "$HTML_URL/style/emboss.css";
+-
+-# URL prefix to place before image links
+-our $IMAGE_URL = "$HTML_URL/images";
+-
+-# URL prefix to place before manual links (only used in static pages)
+-our $MANUAL_URL = "$HTML_URL/manual";
+-
+-# path to the EMBOSS::GUI temporary output directory
+-our $OUTPUT_PATH = "$HTML_PATH/output";
+-
+-# URL corresponding to $OUTPUT_PATH above
+-our $OUTPUT_URL = "$HTML_URL/output";
+-
+-# prefix under which EMBOSS was installed
+-our $EMBOSS_PREFIX = "/usr/local";
+-
+-# path to EMBOSS binaries
+-our $EMBOSS_BIN = "$EMBOSS_PREFIX/bin";
+-
+-# path to EMBOSS installation
+-our $EMBOSS_HOME = "$EMBOSS_PREFIX/share/EMBOSS";
+-
+-# path to EMBOSS ACD files
+-our $EMBOSS_ACDROOT = "$EMBOSS_HOME/acd";
+-
+-# path to EMBOSS data
+-our $EMBOSS_DATA = "$EMBOSS_HOME/data";
+-
+-# path to EMBOSS application manuals
+-our $EMBOSS_MANUAL = "$EMBOSS_HOME/doc/html";
+-
+-# list of groups and applications to exclude from the main menu
+-our @EXCLUDED = (
+-	"ACD",
+-	"acdc",
+-	"acdpretty",
+-	"acdtable",
+-	"acdtrace",
+-	"acdvalid",
+-	"UTILS DATABASE CREATION",
+-	"aaindexextract",
+-	"cutgextract",
+-	"printsextract",
+-	"prosextract",
+-	"rebaseextract",
+-	"tfextract",
+-	"UTILS DATABASE INDEXING",
+-	"dbiblast",
+-	"dbifasta",
+-	"dbiflat",
+-	"dbigcg",
+-);
+-
+-# number of seconds to delay between placeholder page refreshes
+-our $REFRESH_DELAY = 1;
+-
+-# whether or not to display using frames
+-our $FRAMES = 1;
++open (config_file, "</etc/emboss-explorer/emboss-explorer.conf") or die "Cannot load /etc/emboss-explorer/emboss-explorer.conf!";
++my @conf = <config_file>;
++eval join("\n", @conf);
++die $@ if $@;
+ 
+ =item new()
+ 
+@@ -146,6 +84,7 @@ sub new {
+ 
+ 	# check to make sure the output directory is writeable...
+ 	#
++	-d $OUTPUT_PATH or mkpath($OUTPUT_PATH, {mode => 0755});
+ 	-d $OUTPUT_PATH && -w $OUTPUT_PATH
+ 		or die "output directory $OUTPUT_PATH is not writeable";
+ 
+diff --git a/lib/EMBOSS/GUI/XHTML.pm b/lib/EMBOSS/GUI/XHTML.pm
+index eb53fed..f80a717 100644
+--- a/lib/EMBOSS/GUI/XHTML.pm
++++ b/lib/EMBOSS/GUI/XHTML.pm
+@@ -368,9 +368,7 @@ sub _input_html {
+ 	my $app_url = CGI::escape($app);
+ 	my $doc_html = CGI::escapeHTML($acd->documentation);
+ 	my $url = join "/", $self->{script_url}, $app_url;
+-	my $manual_url = $self->{static} ?
+-		"$self->{manual_url}/$app_url.html" :
+-		"$self->{script_url}/help/$app_url";
++	my $manual_url = "$self->{manual_url}/$app_url.html";
+ 
+ 	my $html = <<EOF;
+     <div id='input'>

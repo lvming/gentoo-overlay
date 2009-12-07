@@ -1,0 +1,15 @@
+#####################################################################
+# ChangeLog for sci-biology/emboss-explorer
+# vim: ft=gentoo-changelog
+# triobird-overlay ebuild
+# URL: http://code.google.com/p/triobird-overlay/
+# $Id: ChangeLog 70 2009-02-16 07:11:19Z triobird $
+#####################################################################
+
+  16 Feb 2009; triobird <triobird@example.com> files/emboss-explorer-2.2.0.patch,emboss-explorer-2.2.0.ebuild:
+  fix manual links
+
+  15 Feb 2009; triobird <triobird@example.com> +files/emboss-explorer-2.2.0.patch,+files/emboss-explorer.conf,+emboss-explorer-2.2.0.ebuild:
+  add emboss-explorer 2.2.0
+
+*emboss-explorer-2.2.0 (15 Feb 2009)

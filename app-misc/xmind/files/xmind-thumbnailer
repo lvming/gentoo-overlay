@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# command line parameters
+ifile=$1
+ofile=$2
+size=$3
+
+unzip -p "$ifile" Thumbnails/thumbnail.jpg | convert - +matte -scale "$sizex$size" "png:$ofile"

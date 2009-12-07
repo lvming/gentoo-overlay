@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Type=X-Thumbnailer
+Name=XMind Thumbnailer
+MimeType=application/x-xmind;
+X-Thumbnailer-Exec=/usr/libexec/xmind-thumbnailer %i %o %s
+
+# vi:set encoding=UTF-8:

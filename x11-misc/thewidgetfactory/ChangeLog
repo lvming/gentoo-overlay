@@ -1,0 +1,15 @@
+#####################################################################
+# ChangeLog for x11-misc/thewidgetfactory
+# vim: ft=gentoo-changelog
+# triobird-overlay ebuild
+# URL: http://code.google.com/p/triobird-overlay/
+# $Id: ChangeLog 26 2008-12-16 06:03:56Z triobird $
+#####################################################################
+
+  16 Dec 2008; triobird <triobird@example.com> 
+  +thewidgetfactory-0.2.1.ebuild:
+  
+  Add thewidgetfactory-0.2.1.ebuild.
+  
+*thewidgetfactory-0.2.1 (16 Dec 2008)
+

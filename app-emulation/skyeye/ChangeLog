@@ -1,0 +1,13 @@
+#####################################################################
+# ChangeLog for app-emulation/skyeye
+# vim: ft=gentoo-changelog
+# triobird-overlay ebuild
+# URL: http://code.google.com/p/triobird-overlay/
+# $Id: ChangeLog 3 2008-12-01 07:38:01Z triobird $
+#####################################################################
+
+  01 Dec 2008; triobird <triobird@example.com> +skyeye-1.2.6_rc1.ebuild:
+  Add skyeye-1.2.6_rc1.ebuild.
+
+*skyeye-1.2.6-rc1 (01 Dec 2008)
+

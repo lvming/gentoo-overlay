@@ -1,0 +1,4 @@
+#!/bin/sh
+
+exec python "/usr/lib/furiusisomount/src/main.py" "$@"
+

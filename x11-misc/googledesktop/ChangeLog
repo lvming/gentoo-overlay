@@ -1,0 +1,14 @@
+#####################################################################
+# ChangeLog for x11-misc/googledesktop
+# vim: ft=gentoo-changelog
+# triobird-overlay ebuild
+# URL: http://code.google.com/p/triobird-overlay/
+# $Id: ChangeLog 13 2008-12-01 09:18:15Z triobird $
+#####################################################################
+
+  01 Dec 2008; triobird <triobird@example.com> 
+  +googledesktop-1.2.0.0088.ebuild:
+  
+  Add googledesktop-1.2.0.0088.ebuild.
+
+*googledesktop-1.2.0.0088 (01 Dec 2008)

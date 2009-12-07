@@ -1,0 +1,17 @@
+diff --git a/src/gui/SConscript b/src/gui/SConscript
+index 8648819..6724e5b 100644
+--- a/src/gui/SConscript
++++ b/src/gui/SConscript
+@@ -6,10 +6,10 @@ Import('append_includes')
+ gui_env = qt_env.Clone()
+ #print gui_env['QT_UICCOMSTR']
+ gui_env.Append(	LIBS=[gui_env['YF_CORELIB'], Split(gui_env['YF_QT4_LIB'])],
+-				LIBPATH = ['../yafraycore'],
++				LIBPATH = ['../yafraycore','/usr/lib/qt4'],
+ 				SHLINKFLAGS = gui_env['YF_SHLINKFLAGS'],
+ 				CPPDEFINES= ['BUILDING_QTPLUGIN'],
+-				CPPPATH=['.'])
++				CPPPATH=['.', '/usr/include/qt4'])
+ gui_env.Append(FRAMEWORKS=['QtGui', 'QtCore'])
+ append_includes(gui_env, ['PTHREAD'])
+ 
