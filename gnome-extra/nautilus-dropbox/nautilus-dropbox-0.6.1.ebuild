@@ -20,6 +20,7 @@ DEPEND="
 	>=gnome-base/nautilus-2.16
 	>=x11-libs/libnotify-0
 	>=net-misc/wget-1.10
+	dev-python/docutils
 "
 RDEPEND="${DEPEND}"
 
