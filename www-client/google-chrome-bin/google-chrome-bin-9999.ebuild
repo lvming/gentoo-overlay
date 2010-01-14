@@ -3,22 +3,20 @@
 # http://triobird-overlay.googlecode.com
 #####################################################
 
-inherit eutils
+inherit rpm
 
 DESCRIPTION="Google Chome web browser"
-HOMEPAGE="http://dev.chromium.org/getting-involved/dev-channel"
+HOMEPAGE="http://www.google.com/chrome/"
 
-SRC_URI="google-chrome-data.tar.lzma"
+SRC_URI="http://dl.google.com/linux/direct/google-chrome-beta_current_i386.rpm"
 
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-RESTRICT="fetch"
+RESTRICT="mirror"
 
-DEPEND="
-	app-arch/lzma-utils
-"
+DEPEND=""
 RDEPEND="${DEPEND}
 	dev-libs/nss
 	dev-libs/nspr
@@ -26,17 +24,9 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}"
 
-src_unpack() {
-	unlzma -c ${DISTDIR}/${A} | tar xf -
-	sed -i "s/lib32/lib/g" opt/google/chrome/google-chrome
-}
-
-src_compile() {
-	true
-}
-
 src_install(){
 	cp -r opt usr ${D}
+	fperms 4755 /opt/google/chrome/chrome-sandbox
 	dodir /opt/google/chrome/lib
 	dosym /usr/lib/nss/libnss3.so /opt/google/chrome/lib/libnss3.so.1d
 	dosym /usr/lib/nss/libnssutil3.so /opt/google/chrome/lib/libnssutil3.so.1d
@@ -45,5 +35,7 @@ src_install(){
 	dosym /usr/lib/nspr/libplds4.so /opt/google/chrome/lib/libplds4.so.0d
 	dosym /usr/lib/nspr/libplc4.so /opt/google/chrome/lib/libplc4.so.0d
 	dosym /usr/lib/nspr/libnspr4.so /opt/google/chrome/lib/libnspr4.so.0d
+	cp opt/google/chrome/product_logo_48.png opt/google/chrome/google-chrome.png
+	doicon opt/google/chrome/google-chrome.png
 	domenu opt/google/chrome/google-chrome.desktop
 }
