@@ -17,9 +17,7 @@ IUSE=""
 RESTRICT="strip"
 
 DEPEND=""
-RDEPEND="${DEPEND}
-	|| ( www-client/mozilla-firefox www-client/mozilla-firefox-bin )
-"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"
 

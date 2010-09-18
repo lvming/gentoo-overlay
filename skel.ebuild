@@ -1,6 +1,6 @@
 #####################################################
-# triobird-overlay ebuild
-# http://triobird-overlay.googlecode.com
+# gentoo-overlay ebuild
+# http://git.com/lvming/gentoo-overlay.git
 #####################################################
 
 inherit eutils
